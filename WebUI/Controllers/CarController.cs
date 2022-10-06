@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using Application.Commands.Cars;
 using Application.DTOs;
-using Application.Queries.Car;
+using Application.Queries.Cars;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -71,7 +71,7 @@ namespace WebUI.Controllers
                 return NotFound();
             }
 
-            var car = await mediator.Send(new EditGet(id));
+            var car = await mediator.Send(new EditQuery(id));
 
             if (car == null)
             {
@@ -97,13 +97,13 @@ namespace WebUI.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(carEdit);
-        }
+        }     
 
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            var car = await mediator.Send( new DeleteGet(id));
+            var car = await mediator.Send( new DeleteQuery(id));
             return View(car);
         }
 

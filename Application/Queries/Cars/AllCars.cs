@@ -4,7 +4,7 @@ using Application.Interfaces;
 using AutoMapper;
 using MediatR;
 
-namespace Application.Queries.Car
+namespace Application.Queries.Cars
 {
     public class AllCars : IRequest<List<CarViewDTO>>
     {

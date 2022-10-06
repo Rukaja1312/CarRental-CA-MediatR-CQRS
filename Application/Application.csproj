@@ -35,7 +35,6 @@
     <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
     <None Remove="Commands\" />
     <None Remove="Queries\" />
-    <None Remove="Queries\Car\" />
     <None Remove="Queries\Dealer\" />
     <None Remove="Commands\Dealer\" />
     <None Remove="Commands\Cars\" />
@@ -43,7 +42,6 @@
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="Queries\" />
-    <Folder Include="Queries\Car\" />
     <Folder Include="Queries\Dealer\" />
     <Folder Include="Commands\Dealer\" />
     <Folder Include="Commands\Cars\" />

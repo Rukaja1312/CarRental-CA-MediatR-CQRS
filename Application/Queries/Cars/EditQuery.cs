@@ -1,20 +1,22 @@
 ﻿using System;
+using Application.Commands.Cars;
 using Application.DTOs;
 using Application.Interfaces;
 using MediatR;
 
-namespace Application.Commands.Cars
+namespace Application.Queries.Cars
 {
-    public class EditGet : IRequest<CarEditDTO>
+    public class EditQuery : IRequest<CarEditDTO>
     {
-        public EditGet(int id )
+        public EditQuery(int id)
         {
             Id = id;
         }
+
         public int Id { get; set; }
     }
 
-    public class EdintGetHandler : IRequestHandler<EditGet, CarEditDTO>
+    public class EdintGetHandler : IRequestHandler<EditQuery, CarEditDTO>
     {
         private readonly ICarRepostory carRepostory;
 
@@ -23,7 +25,7 @@ namespace Application.Commands.Cars
             this.carRepostory = carRepostory;
         }
 
-        public Task<CarEditDTO> Handle(EditGet request, CancellationToken cancellationToken)
+        public Task<CarEditDTO> Handle(EditQuery request, CancellationToken cancellationToken)
         {
             return carRepostory.Edit(request.Id);
         }

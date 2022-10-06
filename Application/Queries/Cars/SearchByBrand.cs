@@ -3,7 +3,7 @@ using Application.DTOs;
 using Application.Interfaces;
 using MediatR;
 
-namespace Application.Queries.Car
+namespace Application.Queries.Cars
 {
     public class SearchByBrandQuery : IRequest<List<CarViewDTO>>
     {

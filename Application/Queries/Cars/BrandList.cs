@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 
-namespace Application.Queries.Car
+namespace Application.Queries.Cars
 {
     public class BrandList : IRequest<List<SelectListItem>>
     {
